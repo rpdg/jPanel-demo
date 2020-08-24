@@ -83,6 +83,10 @@ fis.match('{/@types/*.*, /layouts/**.*, *.json , *.ts}', {
 	useHash: true, // 默认的md5 戳
 });
 
+fis.match('**/*.*' , {
+	url : '.$0',
+})
+
 // // hash query
 // let queryPlaceholder = '?__=md5';
 // fis.match('**/*.*', {
