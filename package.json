@@ -1,0 +1,23 @@
+{
+  "name": "epg-panel-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "npm install && npm run copy",
+    "copy": "cpx \"node_modules/epg-panel/dist/index.bundle.js\" src/js/epg.min.js",
+    "t": "fis.util.copy()",
+    "start-dev-server": "fis3 server start --type node --root ./doc --no-daemon -p 8888",
+    "dev": "fis3 release -wL dev -r ./src -d ./doc",
+    "build": "fis3 release prod -r ./src -d ./doc"
+  },
+  "author": "Lyu PF",
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "epg-panel": "^2.0.3"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0"
+  }
+}

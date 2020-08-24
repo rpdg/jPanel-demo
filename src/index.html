@@ -1,0 +1,178 @@
+﻿{{extend '/layouts/base_layout.html'}}
+
+{{block 'head'}}
+<style type="text/css">
+	body {
+		background-color: transparent;
+		margin: 0px;
+	}
+
+	#divTest2 {
+		width: 160px;
+		height: 40px;
+		background: #fdf7bb;
+		position: absolute;
+		top: 300px;
+		left: 20px;
+		display: -webkit-box;
+		-webkit-box-orient: horizontal;
+		overflow: hidden;
+		white-space: nowrap;
+		padding: 0px;
+	}
+
+	.divItem,
+	.divNullPad {
+		width: 40px;
+		height: 40px;
+		margin: 0px 0px;
+		display: inline-block;
+		-webkit-transition-property: all;
+		-webkit-transition-duration: 200ms;
+	}
+
+	#divHelper {
+		width: 40px;
+		height: 40px;
+		background-color: #874976;
+		position: absolute;
+		display: none;
+		z-index: 999;
+		opacity: 0.4;
+		-webkit-transition-property: left top;
+		-webkit-transition-duration: 200ms;
+		-webkit-transition-timing-function: ease-out;
+	}
+
+	#divHelper2 {
+		width: 40px;
+		height: 40px;
+		border: 2px solid #ff0000;
+		position: absolute;
+		display: none;
+		z-index: 999;
+		-webkit-transition-property: left top;
+		-webkit-transition-duration: 200ms;
+		-webkit-transition-timing-function: ease-out;
+	}
+
+	#dWrap {
+		position: absolute;
+		top: 51px;
+		left: 220px;
+		padding: 0px;
+		width: 290px;
+		height: 120px;
+		overflow: hidden;
+	}
+
+	#divTest {
+		margin-top: 0px;
+		width: 290px;
+		height: 200px;
+		display: -webkit-box;
+		-webkit-box-orient: horizontal;
+		-webkit-transition-property: all;
+		-webkit-transition-duration: 200ms;
+	}
+
+	#divTest>.divItem,
+	.divNullPad {
+		opacity: 0.3;
+		background: #d5d9ea;
+		margin: 0;
+		padding: 0;
+	}
+
+	#divTest>.curRow {
+		opacity: 1;
+		background: #d0d5e8;
+	}
+
+	.z0 {
+		margin: 3px;
+		width: 32px;
+		height: 32px;
+	}
+
+	.z1 {
+		margin: 3px;
+		width: 32px;
+		height: 32px;
+		-webkit-transform: scale(1.2);
+		-webkit-transition-property: all;
+		-webkit-transition-duration: 200ms;
+		background: #cc66cc;
+	}
+</style>
+
+{{/block}}
+
+{{block 'body'}}
+<div id="dWrap">
+	<div id="divTest">
+		<div class="divNullPad">&nbsp;</div>
+		<div class="divNullPad">&nbsp;</div>
+		<div class="divNullPad">&nbsp;</div>
+		<div class="divNullPad">&nbsp;</div>
+		<div class="divNullPad">&nbsp;</div>
+		<div class="divNullPad">&nbsp;</div>
+		<div class="divNullPad">&nbsp;</div>
+		<div id="item_0" class="divItem curRow">0</div>
+		<div id="item_1" class="divItem curRow">1</div>
+		<div id="item_2" class="divItem curRow">2</div>
+		<div id="item_3" class="divItem curRow">3</div>
+		<div id="item_4" class="divItem curRow">4</div>
+		<div id="item_5" class="divItem curRow">5</div>
+		<div id="item_6" class="divItem curRow">6</div>
+		<div id="item_7" class="divItem">7</div>
+		<div id="item_8" class="divItem">8</div>
+		<div id="item_9" class="divItem">9</div>
+		<div id="item_10" class="divItem">10</div>
+		<div id="item_11" class="divItem">11</div>
+		<div id="item_12" class="divItem">12</div>
+		<div id="item_13" class="divItem">13</div>
+		<div id="item_14" class="divItem">14</div>
+		<div id="item_15" class="divItem">15</div>
+		<div id="item_16" class="divItem">16</div>
+		<div class="divNullPad">&nbsp;</div>
+		<div class="divNullPad">&nbsp;</div>
+		<div class="divNullPad">&nbsp;</div>
+		<div class="divNullPad">&nbsp;</div>
+	</div>
+</div>
+<div id="divHelper"></div>
+<div id="divTest2">
+	<div class="divItem current">
+		<div class="z0">b0</div>
+	</div>
+	<div class="divItem current">
+		<div class="z0">b1</div>
+	</div>
+	<div class="divItem current">
+		<div class="z0">b2</div>
+	</div>
+	<div class="divItem current">
+		<div class="z0">b3</div>
+	</div>
+	<div class="divItem">
+		<div class="z0">b4</div>
+	</div>
+	<div class="divItem">
+		<div class="z0">b5</div>
+	</div>
+	<div class="divItem">
+		<div class="z0">b6</div>
+	</div>
+	<div class="divItem">
+		<div class="z0">b7</div>
+	</div>
+</div>
+<div id="divHelper2"></div>
+<hr>
+<div id="divLineView"
+	style="position:absolute;top:90px; left: 210px;border:1px solid red;border-width:1px 0px; width: 320px; height:40px;">
+</div>
+
+
+{{/block}}
