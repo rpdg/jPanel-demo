@@ -53,28 +53,12 @@ fis.match('**/*.ts', {
 });
 
 // SCSS Compile
-fis.match('*.scss', {
+fis.match('{*.scss , *.html:scss}', {
 	parser: fis.plugin('node-sass', {
 		outputStyle: 'compact',
 		sourceMap: true,
 	}),
 	rExt: '.css',
-});
-// Compile partial SCSS
-/** usage: 
- * 	<style type="text/x-scss">
-		a {
-			&:hover {
-				color: red;
-			}
-		}
-	</style>
- */
-fis.match('*.html:scss', {
-	parser: fis.plugin('node-sass', {
-		outputStyle: 'compact',
-		sourceMap: true,
-	}),
 });
 
 fis.match('{/@types/*.*, /layouts/**.*, *.json , *.ts}', {
@@ -87,28 +71,6 @@ fis.match('**/*.*' , {
 	url : '.$0',
 })
 
-// // hash query
-// let queryPlaceholder = '?__=md5';
-// fis.match('**/*.*', {
-// 	//useMap: true,
-// 	//release: outPath,
-// 	query: queryPlaceholder, //占位符
-// })
-// 	.match('::package', {
-// 		postpackager: [
-// 			fis.plugin('query', {
-// 				placeholder: queryPlaceholder, // 这里传入占位符
-// 			}),
-// 		],
-// 		useSourceMap: true, // 合并后开启 SourceMap 功能。
-// 	})
-// 	.match('{/@types/*.*, /layouts/**.*, *.json , *.ts}', {
-// 		release: false,
-// 	})
-// 	.match('/node_modules/**.js', {
-// 		release: '/doc/$0',
-// 		skipBrowserify: true,
-// 	});
 
 fis.on('release:end', function () {
 	fis.time(new Date().toLocaleString());
