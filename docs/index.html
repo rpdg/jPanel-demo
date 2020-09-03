@@ -17,7 +17,7 @@
 		background: #fdf7bb;
 		position: absolute;
 		top: 300px;
-		left: 20px;
+		left: 220px;
 		display: -webkit-box;
 		-webkit-box-orient: horizontal;
 		overflow: hidden;
@@ -206,6 +206,9 @@ let a = x$
                 a.reset(a.selectedIndex);
                 //console.log('down:---' , this.items);
             }
+            else {
+                this.jumpToBox(1);
+            }
         },
         up: function () {
             let nodeIdIndex = parseInt(a.selectedElement.id.substr(5), 10);
@@ -223,9 +226,6 @@ let a = x$
                 //console.log('up:--- ' , this.items);
             }
         },
-        left: function () {
-            a.jumpToBox(1);
-        },
     },
     onOk: function () {
         console.log(a.selectedIndex, this.selectedElement);
@@ -242,7 +242,7 @@ let b = x$
     cols: 4,
     frameId: 'divHelper2',
     offset: { x: -2, y: -2 },
-    forceRec: { w: 40, h: 40, x: 17, y: 297 },
+    forceRec: { w: 40, h: 40, x: 217, y: 297 },
     onChange: function (w) {
         if (w != 'auto') {
             let obj = b.selectedElement.firstChild;
@@ -290,6 +290,6 @@ let b = x$
 });
 x$.box.addGrid(a, b).active();
 </script><!--ignore-->
-</body>
+<script type="text/javascript" charset="utf-8" src="http://10.24.4.162:8132/livereload.js"></script></body>
 
 </html>

@@ -4,10 +4,10 @@ x$.log.active(true);
 
 let a = x$
 	.grid<{
-		container: HTMLElement,
-		dataItems: HTMLElement[],
-		overCount: number,
-		divItemLength: number,
+		container: HTMLElement;
+		dataItems: HTMLElement[];
+		overCount: number;
+		divItemLength: number;
 	}>('#divTest>.curRow', {
 		cols: 7,
 		frameId: 'divHelper',
@@ -26,6 +26,8 @@ let a = x$
 					a.ex.container.style.marginTop = -40 * a.ex.overCount + 'px';
 					a.reset(a.selectedIndex);
 					//console.log('down:---' , this.items);
+				} else {
+					this.jumpToBox(1);
 				}
 			},
 			up: function () {
@@ -45,9 +47,6 @@ let a = x$
 					//console.log('up:--- ' , this.items);
 				}
 			},
-			left: function () {
-				a.jumpToBox(1);
-			},
 		},
 		onOk: function () {
 			console.log(a.selectedIndex, this.selectedElement);
@@ -62,13 +61,13 @@ let a = x$
 
 let b = x$
 	.grid<{
-		overCount: number,
-		fullIemList: HTMLElement[],
+		overCount: number;
+		fullIemList: HTMLElement[];
 	}>('#divTest2>.current', {
 		cols: 4,
 		frameId: 'divHelper2',
 		offset: { x: -2, y: -2 },
-		forceRec: { w: 40, h: 40, x: 17, y: 297 },
+		forceRec: { w: 40, h: 40, x: 217, y: 297 },
 		onChange: function (w) {
 			if (w != 'auto') {
 				let obj = b.selectedElement.firstChild as HTMLElement;
