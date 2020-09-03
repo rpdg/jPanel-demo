@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "./node_modules/.bin/fis3 -v",
-		"start-dev-server": "./node_modules/.bin/fis3 server start --type node --root ./docs --no-daemon -p 8888",
+		"init": "node copyJs.js",
+		"start-server": "./node_modules/.bin/fis3 server start --type node --root ./docs --no-daemon -p 8888",
 		"dev": "./node_modules/.bin/fis3 release -wL dev -r ./src -d ./docs",
 		"build": "./node_modules/.bin/fis3 release prod -r ./src -d ./docs"
 	},
