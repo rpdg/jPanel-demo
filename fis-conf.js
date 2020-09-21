@@ -46,7 +46,7 @@ fis.match('**/*.ts', {
 		 * ESNext = 99,
 		 * JSON = 100,
 		 */
-		target: 2,
+		target: 1,
 	}),
 	rExt: '.js',
 	release: false,

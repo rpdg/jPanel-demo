@@ -3,14 +3,31 @@
 
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta name="page-view-size" content="1280*720">
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=1.0)">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>百视购</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #555;
+            color: white;
+            -webkit-transform: translate3d(0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            -webkit-perspective: 1000;
+        }
+
+        body * {
+            box-sizing: border-box;
+        }
+
+        
+    </style>
     
 <style type="text/css">
-	body {
-		background-color: transparent;
-		margin: 0px;
-	}
-
 	#divTest2 {
 		width: 160px;
 		height: 40px;
@@ -43,9 +60,12 @@
 		display: none;
 		z-index: 999;
 		opacity: 0.4;
+		-webkit-transform: translate3d(0, 0, 0);
 		-webkit-transition-property: left top;
-		-webkit-transition-duration: 200ms;
-		-webkit-transition-timing-function: ease-out;
+		-webkit-transition-duration: 100ms;
+		/* -webkit-transition-timing-function: ease-out; */
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
 	}
 
 	#divHelper2 {
@@ -55,9 +75,12 @@
 		position: absolute;
 		display: none;
 		z-index: 999;
-		-webkit-transition-property: left top;
-		-webkit-transition-duration: 200ms;
-		-webkit-transition-timing-function: ease-out;
+		-webkit-transform: translate3d(0, 0, 0);
+		-webkit-transition: left top;
+		-webkit-transition-duration: 100ms;
+		/* -webkit-transition-timing-function: ease-out; */
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
 	}
 
 	#dWrap {
@@ -82,6 +105,7 @@
 
 	#divTest>.divItem,
 	.divNullPad {
+		color: #000;
 		opacity: 0.3;
 		background: #d5d9ea;
 		margin: 0;
@@ -91,19 +115,22 @@
 	#divTest>.curRow {
 		opacity: 1;
 		background: #d0d5e8;
+		color: #000;
 	}
 
 	.z0 {
 		margin: 3px;
 		width: 32px;
 		height: 32px;
+		color: #000;
 	}
 
 	.z1 {
 		margin: 3px;
 		width: 32px;
 		height: 32px;
-		-webkit-transform: scale(1.2);
+		color: #d00;
+		-webkit-transform: scale(1.20);
 		-webkit-transition-property: all;
 		-webkit-transition-duration: 200ms;
 		background: #cc66cc;
@@ -115,38 +142,12 @@
 
 </head>
 
-<body>
+<body class="epgBody">
     
+a test page
 <div id="dWrap">
 	<div id="divTest">
-		<div class="divNullPad">&nbsp;</div>
-		<div class="divNullPad">&nbsp;</div>
-		<div class="divNullPad">&nbsp;</div>
-		<div class="divNullPad">&nbsp;</div>
-		<div class="divNullPad">&nbsp;</div>
-		<div class="divNullPad">&nbsp;</div>
-		<div class="divNullPad">&nbsp;</div>
-		<div id="item_0" class="divItem curRow">0</div>
-		<div id="item_1" class="divItem curRow">1</div>
-		<div id="item_2" class="divItem curRow">2</div>
-		<div id="item_3" class="divItem curRow">3</div>
-		<div id="item_4" class="divItem curRow">4</div>
-		<div id="item_5" class="divItem curRow">5</div>
-		<div id="item_6" class="divItem curRow">6</div>
-		<div id="item_7" class="divItem">7</div>
-		<div id="item_8" class="divItem">8</div>
-		<div id="item_9" class="divItem">9</div>
-		<div id="item_10" class="divItem">10</div>
-		<div id="item_11" class="divItem">11</div>
-		<div id="item_12" class="divItem">12</div>
-		<div id="item_13" class="divItem">13</div>
-		<div id="item_14" class="divItem">14</div>
-		<div id="item_15" class="divItem">15</div>
-		<div id="item_16" class="divItem">16</div>
-		<div class="divNullPad">&nbsp;</div>
-		<div class="divNullPad">&nbsp;</div>
-		<div class="divNullPad">&nbsp;</div>
-		<div class="divNullPad">&nbsp;</div>
+		<div class="divNullPad">&nbsp;</div><div class="divNullPad">&nbsp;</div><div class="divNullPad">&nbsp;</div><div class="divNullPad">&nbsp;</div><div class="divNullPad">&nbsp;</div><div class="divNullPad">&nbsp;</div><div class="divNullPad">&nbsp;</div><div id="item_0" class="divItem curRow">00</div><div id="item_1" class="divItem curRow">01</div><div id="item_2" class="divItem curRow">2</div><div id="item_3" class="divItem curRow">3</div><div id="item_4" class="divItem curRow">4</div><div id="item_5" class="divItem curRow">5</div><div id="item_6" class="divItem curRow">6</div><div id="item_7" class="divItem">7</div><div id="item_8" class="divItem">8</div><div id="item_9" class="divItem">9</div><div id="item_10" class="divItem">10</div><div id="item_11" class="divItem">11</div><div id="item_12" class="divItem">12</div><div id="item_13" class="divItem">13</div><div id="item_14" class="divItem">14</div><div id="item_15" class="divItem">15</div><div id="item_16" class="divItem">16</div><div class="divNullPad">&nbsp;</div><div class="divNullPad">&nbsp;</div><div class="divNullPad">&nbsp;</div><div class="divNullPad">&nbsp;</div>
 	</div>
 </div>
 <div id="divHelper"></div>
@@ -182,21 +183,51 @@
 	style="position:absolute;top:90px; left: 210px;border:1px solid red;border-width:1px 0px; width: 320px; height:40px;">
 </div>
 
+<style>
+	#divScreenLog {
+		color: #fff;
+		position: absolute;
+		z-index: 99999;
+		top: 80px;
+		right: 80px;
+		opacity: 0.80;
+		background: #000;
+
+		font-size: 16px;
+	}
+
+	#full {
+		width: 1280px;
+		height: 720px;
+		top: 0;
+		left: 0;
+		position: absolute;
+		z-index: 99;
+		background-color: brown;
+		background-image: url(./bg_31e016b.jpg);
+	}
+</style>
+<!-- <div id="full">
+	<video src="" style="background-color: #000;"></video>
+</div> -->
 
 
-    <script src='./js/epg.min_3cfe18b.js'></script>
-    <script>/// <reference types="@rpdg/epg-panel" />
+    <script type="text/javascript" charset="utf-8" src="./js/promise_440c463.js"></script>
+    <script type="text/javascript" charset="utf-8" src='./js/epg.min_96a35c0.js'></script>
+    <script type="text/javascript" charset="utf-8">/// <reference types="@rpdg/epg-panel" />
 x$.log.active(true);
-let a = x$
+console.log(x$.version);
+x$.dom.probe();
+var a = x$
     .grid('#divTest>.curRow', {
     cols: 7,
     frameId: 'divHelper',
     edgeRule: {
         down: function () {
-            let nodeIdIndex = parseInt(a.selectedElement.id.substr(5), 10);
+            var nodeIdIndex = parseInt(a.selectedElement.id.substr(5), 10);
             if (nodeIdIndex + a.cols < a.ex.divItemLength) {
                 a.ex.overCount++;
-                for (let i = 0, len = a.items.length; i < len; i++) {
+                for (var i = 0, len = a.items.length; i < len; i++) {
                     a.items[i].className = 'divItem';
                     if (i + a.ex.overCount * a.cols < a.ex.dataItems.length) {
                         a.ex.dataItems[i + a.ex.overCount * this.cols].className = 'divItem curRow';
@@ -211,14 +242,14 @@ let a = x$
             }
         },
         up: function () {
-            let nodeIdIndex = parseInt(a.selectedElement.id.substr(5), 10);
+            var nodeIdIndex = parseInt(a.selectedElement.id.substr(5), 10);
             if (a.ex.overCount > 0) {
                 a.ex.overCount--;
-                for (let i = 0, len = a.items.length; i < len; i++) {
+                for (var i = 0, len = a.items.length; i < len; i++) {
                     a.items[i].className = 'divItem';
                 }
-                let t = ((nodeIdIndex / a.cols) | 0) - 1;
-                for (let j = 0; j < a.cols; j++) {
+                var t = ((nodeIdIndex / a.cols) | 0) - 1;
+                for (var j = 0; j < a.cols; j++) {
                     a.ex.dataItems[t * a.cols + j].className = 'divItem curRow';
                 }
                 a.ex.container.style.marginTop = -40 * a.ex.overCount + 'px';
@@ -237,7 +268,7 @@ let a = x$
     overCount: 0,
     divItemLength: 17,
 });
-let b = x$
+var b = x$
     .grid('#divTest2>.current', {
     cols: 4,
     frameId: 'divHelper2',
@@ -245,7 +276,7 @@ let b = x$
     forceRec: { w: 40, h: 40, x: 217, y: 297 },
     onChange: function (w) {
         if (w != 'auto') {
-            let obj = b.selectedElement.firstChild;
+            var obj = b.selectedElement.firstChild;
             obj.className = 'z1';
             obj = b.previousElement;
             if (obj) {
@@ -262,7 +293,7 @@ let b = x$
                 b.ex.fullIemList[this.selectedIndex + b.ex.overCount].className = 'divItem current';
                 this.reset(this.selectedIndex);
                 //
-                let obj = this.items[this.selectedIndex - 1].firstChild;
+                var obj = this.items[this.selectedIndex - 1].firstChild;
                 obj.className = 'z0';
             }
         },
@@ -274,7 +305,7 @@ let b = x$
                 b.ex.fullIemList[this.selectedIndex + b.ex.overCount].className = 'divItem current';
                 this.reset(this.selectedIndex);
                 //
-                let obj = this.items[this.selectedIndex + 1].firstChild;
+                var obj = this.items[this.selectedIndex + 1].firstChild;
                 obj.className = 'z0';
             }
         },
@@ -289,7 +320,61 @@ let b = x$
     fullIemList: x$.dom.select('#divTest2>.divItem'),
 });
 x$.box.addGrid(a, b).active();
-</script><!--ignore-->
-<script type="text/javascript" charset="utf-8" src="http://10.24.4.162:8132/livereload.js"></script></body>
+</script>
+    
+<script type="text/javascript" charset="utf-8">
+
+	// x$.log.active(true);
+
+	// x$.dom.probe();
+
+	x$.dom.on('keydown', function (e) {
+		if (e.keyCode === 8) {
+			
+			window.location.reload(true);
+		}
+	});
+
+	// try {
+	// 	var a = x$.grid('#divTest>.curRow', {
+	// 		cols: 7,
+	// 		frameId: 'divHelper',
+	// 		edgeRule:{
+	// 			down:function(){
+	// 				var nodeIdIndex = parseInt(a.selectedElement.id.substr(5), 10);
+	// 				if (nodeIdIndex + a.cols < a.ex.divItemLength) {
+	// 					a.ex.overCount++;
+	// 					for (var i = 0, len = a.items.length; i < len; i++) {
+	// 						a.items[i].className = 'divItem';
+	// 						if (i + a.ex.overCount * a.cols < a.ex.dataItems.length) {
+	// 							a.ex.dataItems[i + a.ex.overCount * this.cols].className = 'divItem curRow';
+	// 						}
+	// 					}
+	// 					a.ex.container.style.marginTop = -40 * a.ex.overCount + 'px';
+	// 					a.reset(a.selectedIndex);
+	// 				} else {
+	// 					// this.jumpToBox(1);
+	// 				}
+	// 			}
+	// 		},
+	// 		onOk: function () {
+	// 			console.log(a.selectedIndex, this.selectedElement);
+	// 		},
+	// 	}).extra({
+	// 		container: document.getElementById('divTest'),
+	// 		dataItems: x$.dom.select('#divTest>.divItem'),
+	// 		overCount: 0,
+	// 		divItemLength: 17,
+	// 	});
+
+	// 	x$.box.addGrid(a).active();
+	// }
+	// catch (e) {
+	// 	console.error(e.message)
+	// }
+
+</script>
+
+</body>
 
 </html>

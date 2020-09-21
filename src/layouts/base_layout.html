@@ -3,14 +3,38 @@
 
 <head>
     <meta charset="utf-8" />
-    <title></title>
-    {{block 'head'}}{{/block}}
+    <meta name="page-view-size" content="1280*720">
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=1.0)">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>百视购</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #555;
+            color: white;
+            -webkit-transform: translate3d(0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            -webkit-perspective: 1000;
+        }
+
+        body * {
+            box-sizing: border-box;
+        }
+
+        
+    </style>
+    {{block 'header'}}{{/block}}
 </head>
 
-<body>
+<body class="epgBody">
     {{block 'body'}}{{/block}}
-    <script src='/js/epg.min.js'></script>
-    <script src="./{{$file.filename }}.ts?__inline"></script><!--ignore-->
+    <script type="text/javascript" charset="utf-8" src="./js/promise.js"></script>
+    <script type="text/javascript" charset="utf-8" src='./js/epg.min.js'></script>
+    <script type="text/javascript" charset="utf-8" src="./{{$file.filename }}.ts?__inline"></script>
+    {{block 'footer'}}{{/block}}
 </body>
 
 </html>

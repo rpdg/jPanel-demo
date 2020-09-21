@@ -13,7 +13,7 @@
 	"keywords": [],
 	"license": "ISC",
 	"dependencies": {
-		"@rpdg/epg-panel": "^2.0.5"
+		"@rpdg/epg-panel": "^2.0.8"
 	},
 	"devDependencies": {
 		"fis-parser-node-sass": "^1.0.7",

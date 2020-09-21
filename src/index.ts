@@ -2,6 +2,9 @@
 
 x$.log.active(true);
 
+console.log(x$.version);
+x$.dom.probe();
+
 let a = x$
 	.grid<{
 		container: HTMLElement;
